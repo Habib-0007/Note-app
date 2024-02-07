@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+               <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+ .form-control, .btn {
+   heiht: 300px;
+   font-size: 11px;
+  } 
+ .container {
+   padding: 0;
+  } 
+ .btn {
+  width: 120px;
+ } 
+</style>
+<body>
+  <div class="container-fluid">
+    <div class="container">
+      <h2 class="text-dark font-weight-bold mt-3">
+        Create, Save And Share Stories Or Topics. 
+      </h2>
+      {% if note %} 
+      <form action="/edit/{{ note.id }}" method="post">
+      <input required="" name="title" placeholder="title"  value="{{ note.title }}" class="form-control font-weight-bold p-4 mt-3">
+      <textarea required="" id="tt" name="text" type="text" class="form-control mt-3 p-4" rows="20" placeholder="type"></textarea>
+    </div>
+  </div>
+  
+  <div class="fixed-bottom p-3 container">
+    <button style="background: darkorchid;" class="btn btn-prmary text-light float-right p-2">
+      Add changes
+    </button>
+    </form>
+    
+    <a style="border: 1px solid darkorchid; color: darkorchid;" href="/" class="btn btn-outlineprimary float-left p-2">
+      Back to home 
+    </a>
+  </div>
+  <script>
+      text = document.getElementById("tt");
+      
+      text.value = "{{ note.text }}";
+  </script>
+  {% endif %} 
+</body>
+</html>
