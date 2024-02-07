@@ -1,76 +1,48 @@
-<!Doctype html>
+<!doctype html>
 <html>
-    <head>
-<title>Signup</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <style>
-    .col-sm-3,.row, body {
-      background: black;
-     } 
-    .col-sm-6 {
-      background: #17171f;
-      border-radius: 10px;
-     } 
-    .text {
-      color: lightgrey;
-      font-size: 14px
-     } 
-  </style>
-  <body>
-    <div class="container-fluid">
-      <div class="row p-3 ">
-        <br><br><br><br>
-        <div class="col-sm-3"></div>
-        
-        <div class="col-sm-6  mt-4 p-3">
-           <h2 class="text-light font-weight text-left">
-             Signup
-           </h2>
-           <p class="text text-left">
-             Welcome to Craftx studios 
-           </p>
-           <form action="/signup" method="post" enctype ="multipart/form-data">
-           <div class="mb-4 form-group">
-             <input type="text" name="username" class="form-control text-dark" placeholder="username" required="">
-           </div>
-           <div class="mb-4 form-group">
-             <input type="password" name="password" class="form-control text-dark" placeholder="password" required="">
-           </div>
-           
-           <div class="mb-4 form-group">
-             <input type="email" name="email" class="form-control text-dark" placeholder="email" required="">
-           </div>
-           
-           <div class="mb-3 form-group">
-             <input type="file" name="image" class="form-control">
-           </div>
-           
-           <div class="mb-3 form-group">
-             <p class="text text-right">
-               <a href="/login" class="text text-right">
-                 Already have an account? login
-               </a>
-             </p>
-           </div>
-           
-           <div class="form-group mb-4">
-             <button style="background: darkorchid" class="btn text-light container">
-             signup
-             </button>
-           </div>
-           </form>
+	<head>
+		<title>Signup</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="{{url_for('static', filename='./global.css')}}"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{url_for('static', filename='./signup.css')}}"
+		/>
 
-        </div>
-        
-        <div class="col-sm-3"></div>
-      </div>
-    </div>
-  </body>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+	</head>
+	<body>
+		<section class="signup-container">
+			<h2>Signup</h2>
+			<p>Welcome to Noteapp</p>
+			<form action="/signup" method="post" enctype="multipart/form-data">
+				<input type="text" name="username" placeholder="Username" required />
+				<input type="email" name="email" placeholder="Email" required />
+				<input
+					type="password"
+					name="password"
+					placeholder="Password"
+					required
+				/>
+				<label for="image"><i class="fa fa-image"></i></label>
+				<input
+					type="file"
+					name="image"
+					id="image"
+					accept=".jpg, .jpeg, .png"
+					style="display: none"
+				/>
+				<button id="signupBtn">Signup</button>
+				<a href="/login" class="login-link"> Already have an account? Login </a>
+			</form>
+		</section>
+	</body>
 </html>

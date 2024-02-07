@@ -1,0 +1,78 @@
+:root {
+	--main: hsl(263, 70%, 50.4%);
+	--lightgrey: hsl(220, 13%, 91%);
+	--darkgrey: hsl(217, 19.1%, 26.7%);
+	--white: rgba(255, 255, 255, 1);
+}
+
+body {
+	background: var(--lightgrey);
+}
+
+.login-container {
+	width: 94%;
+	max-width: 600px;
+	margin: 150px auto 0;
+	background: var(--white);
+	border-radius: 10px;
+	padding: 16px 12px;
+}
+
+.login-container > h1 {
+	color: var(--darkgrey);
+	font-weight: bolder;
+	font-size: 28px;
+}
+
+.login-container > p {
+	padding-block: 10px;
+	font-size: 18px;
+	color: var(--main);
+	font-weight: bold;
+}
+
+.login-container form {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.login-container form input[type="email"],
+.login-container form input[type="password"] {
+	display: block;
+	padding: 12px 14px;
+	font-size: 18px;
+	background: var(--lightgrey);
+	width: 100%;
+	border-radius: 6px;
+	border: 1px solid var(--lightgrey);
+	caret-color: var(--main);
+}
+
+.login-container form input[type="email"]:hover,
+.login-container form input[type="password"]:hover {
+	background: var(--white);
+}
+
+.login-container .remember {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 8px;
+	accent-color: var(--main);
+}
+
+.login-container #loginBtn {
+	background: var(--main);
+	color: var(--white);
+	font-size: 18px;
+	padding-block: 12px;
+	font-weight: bold;
+	border-radius: 6px;
+}
+
+.login-container .signup-link {
+	text-align: center;
+	color: var(--main);
+}
