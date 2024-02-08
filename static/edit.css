@@ -1,0 +1,71 @@
+body {
+	background: var(--white);
+}
+
+:root {
+	--main: hsl(263, 70%, 50.4%);
+	--lightgrey: hsl(220, 13%, 91%);
+	--darkgrey: hsl(217, 19.1%, 26.7%);
+	--white: rgba(255, 255, 255, 1);
+}
+
+.edit-container {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	padding: 16px;
+	gap: 12px;
+}
+
+.edit-container form {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.edit-container form input,
+.edit-container form textarea {
+	display: block;
+	padding: 12px 14px;
+	font-size: 18px;
+	background: var(--lightgrey);
+	width: 100%;
+	border-radius: 6px;
+	border: 1px solid var(--lightgrey);
+	caret-color: var(--main);
+}
+
+.edit-container form input:hover,
+.edit-container form textarea:hover {
+	background: var(--white);
+}
+
+.edit-container .footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+}
+
+.edit-container .footer button {
+	background: var(--main);
+	color: var(--white);
+	font-size: 18px;
+	padding: 12px 16px;
+	font-weight: bold;
+	border-radius: 6px;
+}
+
+.edit-container .footer a {
+	background: var(--white);
+	color: var(--main);
+	text-decoration: none;
+	font-size: 18px;
+	padding: 12px 16px;
+	font-weight: bold;
+	border-radius: 6px;
+	box-shadow: 0px 0px 2px var(--main);
+}
