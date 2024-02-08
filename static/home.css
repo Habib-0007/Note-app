@@ -1,0 +1,138 @@
+body {
+	background: var(--white);
+}
+
+:root {
+	--main: hsl(263, 70%, 50.4%);
+	--lightgrey: hsl(220, 13%, 91%);
+	--darkgrey: hsl(217, 19.1%, 26.7%);
+	--white: rgba(255, 255, 255, 1);
+}
+
+.home-container {
+	/*display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	gap: 12px; */
+	padding: 16px;
+}
+
+.home-container > h1 {
+	font-size: 24px;
+	color: var(--darkgrey);
+}
+
+.home-container > input {
+	display: block;
+	padding: 12px 14px;
+	font-size: 18px;
+	background: var(--lightgrey);
+	width: 100%;
+	border-radius: 6px;
+	border: 1px solid var(--lightgrey);
+	caret-color: var(--main);
+	margin-block: 16px;
+}
+
+.home-container > input:hover {
+	background: var(--white);
+}
+
+.notes {
+	background: var(--darkgrey);
+	color: var(--white);
+	margin-top: 12px;
+	padding: 10px 12px;
+	border-radius: 6px;
+	overflow-y: scroll;
+}
+
+.notes .note-title {
+	font-size: 18px;
+	font-weight: bolder;
+}
+
+.notes .note-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+}
+
+.notes .note-head a {
+	display: block;
+	background: var(--white);
+	color: var(--main);
+	padding: 6px 10px;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+.notes .timestamp {
+	padding-block: 10px;
+	font-size: 16px;
+}
+
+.notes .tap {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: row;
+	font-size: 18px;
+	gap: 4px;
+}
+
+.notes .tap a {
+	display: block;
+	background: var(--white);
+	color: var(--main);
+	padding: 6px 12px;
+	border-radius: 4px;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.empty {
+	font-weight: bolder;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 28px;
+	color: var(--darkgrey);
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	position: fixed;
+	left: 16px;
+	right: 16px;
+	bottom: 16px;
+}
+
+.footer a {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: row;
+	gap: 6px;
+	text-decoration: none;
+	padding: 12px 16px;
+	font-weight: bold;
+	border-radius: 6px;
+}
+
+.footer a:first-child {
+	background: var(--white);
+	box-shadow: 0px 0px 2px var(--main);
+}
+
+.footer a:last-child {
+	background: var(--main);
+	color: var(--white);
+}
