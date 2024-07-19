@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 from datetime import datetime
 from functools import wraps
-import serverless_http
+from serverless_wsgi import handle_request
 
 app = Flask(__name__)
 app.config["SECRET_KEY"]  = 'divine123123000000'
@@ -189,5 +189,5 @@ if __name__ == "__main__":
         db.create_all()
     app.run(debug = True, port=5001)
 
-
-handler = serverless_http(app)
+def handler(event, context):
+    return handle_request(app, event, context)
