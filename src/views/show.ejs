@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title><%= note.title %></title>
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-  <h1><%= note.title %></h1>
-  <div><%= htmlContent %></div>
-  <a href="/notes/<%= note.id %>/edit">Edit</a>
-  <form action="/notes/<%= note.id %>?_method=DELETE" method="POST" style="display:inline;">
-    <button type="submit">Delete</button>
-  </form>
-  <a href="/notes">Back</a>
-</body>
-</html>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="/css/styles.css">
+	<title><%= note.title %></title> 
+		</head> 
+		<body>
+		<%- include("partials/header.ejs") %>
+		<section class="show">
+			<div>
+			<h1><%= note.title %></h1> 
+			<div>
+				<%= htmlContent %>
+			</div>
+		<div class="show_nav_buttons">
+		<a href="/notes/<%= note.id %>/edit">Edit</a> 
+		<form action = "/notes/<%= note.id %>?_method=DELETE" method="POST"> 
+				<button type="submit"> Delete</button>
+			</form> 
+			<a href="/notes">Back</a>
+		</div>
+		</div>
+		</section>
+			</body>
+			</html>

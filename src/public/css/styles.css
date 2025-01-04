@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: "Inter", sans-serif;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: repeat(
+		12,
+		1fr
+	);
+}
+
+.header section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	grid-column-start: 1;
+	grid-column-end: 13;
+	padding: 20px 12px;
+}
+
+.header a {
+	background: #222;
+	color: #fff;
+	padding: 10px 14px;
+	font-size: 16px;
+	border-radius: 4px;
+}
+
+/* Index Page */
+
+.index {
+	display: grid;
+	grid-template-columns: repeat(
+		12,
+		1fr
+	);
+}
+
+.index > div {
+	display: flex;
+	justify-content: start;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 24px;
+	grid-column-start: 1;
+	grid-column-end: 13;
+	padding: 20px 12px;
+}
+
+.index_top {
+	display: flex;
+	justify-content: start;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.index_top a {
+	display: block;
+	width: 100%;
+	color: #222;
+	font-size: 16px;
+	text-decoration: underline;
+}
+
+.index ul {
+	display: flex;
+	justify-content: start;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.index ul li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: row;
+	gap: 14px;
+	border-radius: 6px;
+	box-shadow: 2px 2px 10px 1px
+		rgba(0, 0, 0, 0.3);
+	padding: 12px;
+}
+
+.index ul li a {
+	display: block;
+	width: 100%;
+	color: #222;
+	flex-shrink: 1;
+	font-size: 18px;
+}
+
+.index ul li button {
+	display: block;
+	background: #222;
+	color: #fff;
+	flex-shrink: 1;
+	padding: 8px 12px;
+	font-size: 16px;
+	border-radius: 4px;
+}
+
+/* Show Page */
+
+.show {
+	display: grid;
+	grid-template-columns: repeat(
+		12,
+		1fr
+	);
+}
+
+.show > div {
+	display: flex;
+	justify-content: start;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 24px;
+	grid-column-start: 1;
+	grid-column-end: 13;
+	padding: 20px 12px;
+}
+
+.show_nav_buttons {
+	align-self: stretch;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: row;
+	gap: 14px;
+}
+
+.show_nav_buttons a,
+.show_nav_buttons button {
+	display: block;
+	background: #222;
+	color: #fff;
+	flex-shrink: 1;
+	padding: 8px 18px;
+	font-size: 16px;
+	border-radius: 4px;
+}
+
+/* New Page */
+
+.new {
+	display: grid;
+	grid-template-columns: repeat(
+		12,
+		1fr
+	);
+}
+
+.new > div {
+	display: flex;
+	justify-content: start;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 24px;
+	grid-column-start: 1;
+	grid-column-end: 13;
+	padding: 20px 12px;
+}
+
+.new form {
+	display: flex;
+	justify-content: start;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.new form input,
+.new form textarea {
+	width: 100%;
+	border: 2px solid #aaa;
+	padding: 16px;
+	font-size: 16px;
+	border-radius: 6px;
+	resize: none;
+}
+
+.new form textarea {
+	height: 50vh;
+}
+
+.new form button {
+	display: block;
+	background: #222;
+	color: #fff;
+	padding: 14px 18px;
+	font-size: 16px;
+	border-radius: 4px;
+}
+
+.new form input:hover,
+.new form input:focus,
+.new form textarea:hover,
+.new form textarea:focus {
+	border: 2px solid #222;
+}
+
+/* Edit Page */
+
+.edit {
+	display: grid;
+	grid-template-columns: repeat(
+		12,
+		1fr
+	);
+}
+
+.edit > div {
+	display: flex;
+	justify-content: start;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 24px;
+	grid-column-start: 1;
+	grid-column-end: 13;
+	padding: 20px 12px;
+}
+
+.edit form {
+	display: flex;
+	justify-content: start;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.edit form input,
+.edit form textarea {
+	width: 100%;
+	border: 2px solid #aaa;
+	padding: 16px;
+	font-size: 16px;
+	border-radius: 6px;
+	resize: none;
+}
+
+.edit form textarea {
+	height: 50vh;
+}
+
+.edit form button {
+	display: block;
+	background: #222;
+	color: #fff;
+	padding: 14px 18px;
+	font-size: 16px;
+	border-radius: 4px;
+}
+
+.edit form input:hover,
+.edit form input:focus,
+.edit form textarea:hover,
+.edit form textarea:focus {
+	border: 2px solid #222;
+}
+
+@media screen and (min-width: 720px) {
+	.header section {
+		grid-column-start: 2;
+		grid-column-end: 12;
+	}
+
+	/* Index Page */
+
+	.index > div {
+		grid-column-start: 2;
+		grid-column-end: 12;
+	}
+
+	/* Show Page */
+
+	.show > div {
+		grid-column-start: 2;
+		grid-column-end: 12;
+	}
+
+	/* New Page */
+
+	.new > div {
+		grid-column-start: 2;
+		grid-column-end: 12;
+	}
+}
