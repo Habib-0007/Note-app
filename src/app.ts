@@ -1,10 +1,10 @@
-import express from "express";
+import express, { Application, Request, Response } from "express";
 import bodyParser from "body-parser";
 import methodOverride from "method-override";
 import noteRoutes from "./routes/noteRoutes";
 import path from "path";
 
-const app = express();
+const app: Application = express();
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/notes", noteRoutes);
 
 // Default route
-app.get("/", (req, res) => {
+app.get("/", (req: Response, res: Response) => {
 	res.redirect("/notes");
 });
 

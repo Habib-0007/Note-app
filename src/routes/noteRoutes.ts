@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import { marked } from "marked";
 import sanitizeHtml from "sanitize-html"
 
@@ -17,17 +17,17 @@ marked.setOptions({
 });
 
 // List Notes
-router.get("/", (req, res) => {
+router.get("/", (req: Request, res: Response) => {
 	res.render("index", { notes });
 });
 
 // New Note Form
-router.get("/new", (req, res) => {
+router.get("/new", (req: Request, res: Response) => {
 	res.render("new");
 });
 
 // Create Note
-router.post("/", (req, res) => {
+router.post("/", (req: Request, res: Response) => {
 	const { title, content } = req.body;
 	const id = Date.now().toString();
 	notes.push({ id, title, content });
@@ -35,7 +35,7 @@ router.post("/", (req, res) => {
 });
 
 // View Note
-router.get("/:id", async (req, res) => {
+router.get("/:id", async (req: Request, res: Response) => {
 	const note = notes.find((note) => note.id === req.params.id);
 	if (note) {
 		const rawHtmlContent = await marked.parse(note.content);
@@ -47,7 +47,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // Edit Note Form
-router.get("/:id/edit", (req, res) => {
+router.get("/:id/edit", (req: Request, res: Response) => {
 	const note = notes.find((note) => note.id === req.params.id);
 	if (note) {
 		res.render("edit", { note });
@@ -57,7 +57,7 @@ router.get("/:id/edit", (req, res) => {
 });
 
 // Update Note
-router.put("/:id", (req, res) => {
+router.put("/:id", (req: Request, res: Response) => {
 	const { title, content } = req.body;
 	const note = notes.find((note) => note.id === req.params.id);
 	if (note) {
@@ -70,7 +70,7 @@ router.put("/:id", (req, res) => {
 });
 
 // Delete Note
-router.delete("/:id", (req, res) => {
+router.delete("/:id", (req: Request, res: Response) => {
 	notes = notes.filter((note) => note.id !== req.params.id);
 	res.redirect("/notes");
 });
