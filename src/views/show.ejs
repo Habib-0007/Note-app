@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= note.title %></title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1><%= note.title %></h1>
+  <div><%= htmlContent %></div>
+  <a href="/notes/<%= note.id %>/edit">Edit</a>
+  <form action="/notes/<%= note.id %>?_method=DELETE" method="POST" style="display:inline;">
+    <button type="submit">Delete</button>
+  </form>
+  <a href="/notes">Back</a>
+</body>
+</html>

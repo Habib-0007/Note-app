@@ -1,0 +1,36 @@
+{
+  "name": "note-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "nodemon src/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Habib-0007/Note-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Habib-0007/Note-app/issues"
+  },
+  "homepage": "https://github.com/Habib-0007/Note-app#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "marked": "^15.0.5",
+    "method-override": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/method-override": "^3.0.0",
+    "@types/node": "^22.10.5",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
