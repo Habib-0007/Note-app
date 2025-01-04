@@ -23,12 +23,14 @@
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "marked": "^15.0.5",
-    "method-override": "^3.0.0"
+    "method-override": "^3.0.0",
+    "sanitize-html": "^2.14.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/method-override": "^3.0.0",
     "@types/node": "^22.10.5",
+    "@types/sanitize-html": "^2.13.0",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"

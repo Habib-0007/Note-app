@@ -12,8 +12,8 @@
 		<section class="show">
 			<div>
 			<h1><%= note.title %></h1> 
-			<div>
-				<%= htmlContent %>
+			<div class="note_content">
+				<%- htmlContent %>
 			</div>
 		<div class="show_nav_buttons">
 		<a href="/notes/<%= note.id %>/edit">Edit</a> 
