@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/notes", noteRoutes);
 
 // Default route
-app.get("/", (req: Response, res: Response) => {
+app.get("/", (req: Request, res: Response) => {
 	res.redirect("/notes");
 });
 
